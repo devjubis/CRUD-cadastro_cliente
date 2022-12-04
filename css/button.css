@@ -1,0 +1,49 @@
+.button {
+    border-style: none;
+    height: 40px;
+    padding: 5px 8px; 
+    border-radius: 15px 15px 15px 15px;
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    cursor: pointer;
+    transition: box-shadow .7s ease;
+}
+
+.button.grey {
+    background-color: hsl(333, 71%, 27%);
+}
+
+.button.green {
+    background-color: hsl(147, 83%, 44%);
+}
+
+.button.red {
+    background-color: hsl(0, 100%, 64%);
+}
+
+.button:hover {
+    box-shadow: inset 200px 0 0 #00000055;
+}
+
+@media(max-width:480px) {
+    .button.mobile {
+        color: transparent;
+        font-size: 0;
+        width: 10%;
+        height: 45px;
+        border-radius: 50%;
+        position: fixed;
+        top: 92vh;
+        left: 77vw;
+    }
+    .button.mobile::before {
+        content: "+";
+        color: hsl(0, 0%, 0%); 
+        font-size: 1.6rem;
+        width: 100%;
+        height: 100%;
+
+    }
+}
